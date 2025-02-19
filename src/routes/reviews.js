@@ -28,7 +28,6 @@ router.post("/", auth, async (req, res, next) => {
     res.status(201).json(newReview);
   } catch (error) {
     res.status(400).json({ message: error.message }); // Bad request Response
-    next(error);
   }
 });
 
@@ -89,7 +88,6 @@ router.put("/:id", auth, async (req, res, next) => {
     }
   } catch (error) {
     res.status(400).json({ message: error.message }); // Bad request Response
-    next(error);
   }
 });
 
