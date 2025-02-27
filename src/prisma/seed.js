@@ -62,6 +62,7 @@ async function main() {
         bathRoomCount: property.bathRoomCount,
         maxGuestCount: property.maxGuestCount,
         rating: property.rating,
+        image: property.image,
 
         host: {
           connect: { id: property.hostId },

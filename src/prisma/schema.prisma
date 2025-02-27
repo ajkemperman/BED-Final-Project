@@ -44,9 +44,10 @@ model Property {
   bathRoomCount   Int                            // Number of bathrooms property
   maxGuestCount   Int                            // Maximum allowed geusts property
   rating          Int                            // Rating of property
+  image           String                         // Image of property
   hostId          String                         // Host connected with property
   
-  host  Host       @relation(fields: [hostId], references: [id], onDelete: Cascade, onUpdate: Cascade)    // This defines the host of the property, with cascading updates and deletions.
+  host            Host      @relation(fields: [hostId], references: [id], onDelete: Cascade, onUpdate: Cascade)    // This defines the host of the property, with cascading updates and deletions.
 
 
   amenities       Amenity[]                      // Many-to-many relationship: Multiple properties belong to multiple amenities
@@ -94,5 +95,5 @@ model Amenity {
   id              String    @id @default(uuid())     // Unique ID for each amenity
   name            String                             // Name of amenity 
 
-  properties Property[]                              // Many-to-many relationship: Multiple amenities belong to multiple properties
+  properties      Property[]                         // Many-to-many relationship: Multiple amenities belong to multiple properties
 }
