@@ -10,6 +10,7 @@ import amenitiesRouter from "./routes/amenities.js";
 import loginRouter from "./routes/login.js";
 import log from "./middleware/logMiddleware.js";
 import errorHandler from "./middleware/errorHandler.js";
+import cors from "cors";
 
 const app = express();
 
@@ -37,6 +38,7 @@ app.use(Sentry.Handlers.tracingHandler());
 // Global middleware
 app.use(express.json());
 app.use(log);
+app.use(cors({ origin: "*" })); // Allow all origins
 
 // Resource routes
 app.use("/users", usersRouter);
