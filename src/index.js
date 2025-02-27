@@ -56,6 +56,6 @@ app.use(Sentry.Handlers.errorHandler());
 // Error handling
 app.use(errorHandler);
 
-app.listen(443, () => {
-  console.log("Server is listening on port 443");
+app.listen(3000, () => {
+  console.log("Server is listening on port 3000");
 });
