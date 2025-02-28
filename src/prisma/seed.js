@@ -63,7 +63,7 @@ async function main() {
         maxGuestCount: property.maxGuestCount,
         rating: property.rating,
         image: property.image,
-
+        amenitiesIds: property.amenitiesIds, // Store as JSON array
         host: {
           connect: { id: property.hostId },
         },

@@ -46,6 +46,7 @@ model Property {
   rating          Int                            // Rating of property
   image           String                         // Image of property
   hostId          String                         // Host connected with property
+  amenitiesIds    Json                           // Amenities for property Json Array
   
   host            Host      @relation(fields: [hostId], references: [id], onDelete: Cascade, onUpdate: Cascade)    // This defines the host of the property, with cascading updates and deletions.
 
