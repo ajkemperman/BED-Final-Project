@@ -9,6 +9,7 @@ const createProperty = async (
   bathRoomCount,
   maxGuestCount,
   rating,
+  image,
   hostId,
   amenitiesIds
 ) => {
@@ -24,6 +25,7 @@ const createProperty = async (
       bathRoomCount,
       maxGuestCount,
       rating,
+      image,
       host: {
         connect: { id: hostId },
       },
