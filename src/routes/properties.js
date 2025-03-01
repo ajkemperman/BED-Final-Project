@@ -41,6 +41,7 @@ router.post("/", auth, async (req, res, next) => {
       bathRoomCount,
       maxGuestCount,
       rating,
+      image,
       hostId,
       amenitiesIds,
     } = req.body;
@@ -53,6 +54,7 @@ router.post("/", auth, async (req, res, next) => {
       bathRoomCount,
       maxGuestCount,
       rating,
+      image,
       hostId,
       amenitiesIds
     );
@@ -108,6 +110,7 @@ router.put("/:id", auth, async (req, res, next) => {
       bathRoomCount,
       maxGuestCount,
       rating,
+      image,
       hostId,
       amenitiesIds,
     } = req.body;
@@ -120,6 +123,7 @@ router.put("/:id", auth, async (req, res, next) => {
       bathRoomCount,
       maxGuestCount,
       rating,
+      image,
       hostId,
       amenitiesIds,
     });
